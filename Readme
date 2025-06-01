@@ -1,0 +1,35 @@
+Here's how to implement a temperature monitoring system using the NXP LPC2129 ARM microcontroller, LM35 temperature sensor, and an LCD display.
+
+1)Components Required
+->LPC2129 microcontroller board
+->LM35 temperature senso
+->16x2 LCD display (HD44780 compatible)
+->10kΩ potentiometer (for LCD contrast adjustment)
+->Breadboard and jumper wires
+->5V power supply
+
+
+2)Circuit Connections
+->LM35 Connections:
+->Connect LM35 Vcc to 5V
+->Connect LM35 GND to ground
+->Connect LM35 OUT to LPC2129 ADC0.0 (P0.28)
+
+
+
+3)LCD Connections (4-bit mode):
+->LCD RS -> P0.8 (GPIO)
+->LCD RW -> GND (write only)
+->LCD E -> P0.9 (GPIO)
+->LCD D4 -> P0.10 (GPIO)
+->LCD D5 -> P0.11 (GPIO)
+->LCD D6 -> P0.12 (GPIO)
+->LCD D7 -> P0.13 (GPIO)
+->LCD VSS -> GND
+->LCD VDD -> 5V
+
+LCD VO -> Potentiometer center pin
+
+LCD A (backlight+) -> 5V
+
+LCD K (backlight-) -> GND
